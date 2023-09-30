@@ -1,5 +1,9 @@
 @import url('http://fonts.googleapis.com/css2?family=Lato&display=swap');
-
+:root {
+    --theme-color: #add8e6;
+    --background-color: #d2873c;
+    --white: #fff;
+}
 * {
     box-sizing: border-box;
 }
@@ -7,20 +11,19 @@ body{
     font-family: 'Lato',sans-serif;
     background-color: #333;
     color: #222;
-
     overflow-x: hidden;
     margin: 0;
     
 }
 .container{
-    background-color: #fafafa;
-    transform-origin:top left ;
+    background-color: var(--background-color);
+    transform-origin: top left ;
     transition: transform  0.5s linear;
     width: 100vw;
     min-height: 100vh;
     padding: 50px;
 }
-.container .show-nav{
+.container.show-nav{
     transform: rotate(-20deg);
 }
 
@@ -30,14 +33,14 @@ body{
     left: -100px;
 }
 .circle{
-    background-color: #ff7979;
+    background-color: #efc693;
     height: 200px;
     width: 200px;
     border-radius: 50%;
     position: relative;
-    transition: transform 0.5 liner;
+    transition: transform 0.5s linear;
 }
-.container .show-nav .circle{
+.container.show-nav .circle{
     transform: rotate(-70deg);
 }
 
@@ -50,7 +53,7 @@ body{
     background: transparent;
     border: 0;
     font-size: 26px;
-    color: #fff;
+    color: #f69205;
 }
 .circle button:focus{
     outline:none;
@@ -79,14 +82,14 @@ nav ul{
 }
 nav ul li{
     text-transform: uppercase;
-    color: #fff;
+    color: #f68009;
     margin: 40px 0;
     transform: translate(-100%);
     transition: tranform 0.4s ease-in;
 
 }
 nav ul li i{
-    font-size: 20px;
+    font-size: 15px;
     margin-right:10px ;
     
 }
