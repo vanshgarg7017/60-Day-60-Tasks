@@ -2,9 +2,13 @@
 
 :root{
     --left-bg-color:rgba(87,84,236,0.7); 
-    --right-bg-color:rgba(43,43,43,0.8);
+    --right-bg-color:rgba(87, 40, 84, 0.8);
     --left-btn-hover-color:rgba(87,84,236,1);
     --right-btn-hover-color:rgba(28,122,28,1);
+    --hover-width:75%;
+    --other-width:25%;
+    --speed:1000ms;
+
 }
 * {
     box-sizing: border-box;
@@ -68,7 +72,7 @@ h1{
 }
 .spilit.left{
     left: 0;
-    background: url('Image.png');
+    background: url('Image/Product\ 01\ eniko-kis.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -86,9 +90,34 @@ h1{
     height: 100%;
     background-color: var(--left-bg-color);
 }
+.spilit.right, .spilit.left, .spilit.left::before, .spilit.right::before{
+    transition: all var(--speed) ease-in-out;
+}
 .spilit.right{
     right: 0;
-    background: url('Product\ 01\ eniko-kis.jpeg');
+    background: url('Image/Product\ 04\ giorgio-trovato.jpeg');
     background-repeat: no-repeat;
     background-size: cover ;
+}
+.hover-left .left{
+    width: var(--hover-width)
+}
+.hover-left .right{
+     width: var(--other-width)
+}
+.hover-right .right{
+    width: var(--hover-width)
+}
+.hover-right .left{
+     width: var(--other-width)
+}
+@media (max-width: 800px) {
+    h1{
+        font-size: 2rem;
+    }
+    .btn{
+        padding: 1.2rem;
+        width: 12rem;
+    }
+    
 }
